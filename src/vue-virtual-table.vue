@@ -1412,9 +1412,9 @@ export default {
       if (
         this.$refs.mainScroll.getBoundingClientRect().width < this.minWidthTemp
       ) {
-        this.$refs.mainScroll.setAttribute("style", "overflow-x: scroll;");
+        this.$refs.mainScroll.setAttribute("style", "overflow-x: auto;");
       } else {
-        this.$refs.mainScroll.setAttribute("style", "overflow-x: hidden;");
+        this.$refs.mainScroll.setAttribute("style", "overflow-x: auto;");
       }
     },
     clearObj(obj) {
@@ -1428,13 +1428,14 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-$default-color: #3caed2;
+$default-color: #ffffff;
 
 .main-scroll {
   width: 100%;
   overflow-y: hidden;
   border: 1px solid #ebeef5;
-  font-size: 13px;
+  font-size: 11px;
+  color: #606266;
   box-sizing: border-box;
   position: relative;
 }
@@ -1448,7 +1449,10 @@ $default-color: #3caed2;
 }
 
 .item-cell,
-.header-cell,
+.header-cell{
+  height: 30px;
+}
+
 .bottom-cell {
   display: flex;
   padding: 5px;
@@ -1517,7 +1521,7 @@ i.sort-descending.selected {
 
 .header-line {
   color: #606266;
-  height: 50px;
+  height: 30px;
 }
 .bottom-line {
   height: 50px;
@@ -1549,7 +1553,7 @@ i.sort-descending.selected {
   /*height: 800px;*/
   box-sizing: border-box;
   overflow: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .scroller {
@@ -1603,7 +1607,7 @@ div.item-line.unselectable {
 .filter-list {
   width: 100%;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .filter-list:hover {
   cursor: pointer;
