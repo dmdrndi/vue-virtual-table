@@ -1428,7 +1428,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-$default-color: #ffffff;
+$default-color: #3caed2;
 
 .main-scroll {
   width: 100%;
@@ -1593,17 +1593,7 @@ div.item-line.unselectable {
 
 /*----------------*/
 
-.tag {
-  padding: 0 10px;
-  height: 28px;
-  line-height: 28px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: $default-color;
-  background-color: rgba(60, 174, 210, 0.1);
-  border: 1px solid rgba(60, 174, 210, 0.2);
-  white-space: nowrap;
-}
+
 .filter-list {
   width: 100%;
   max-height: 300px;
